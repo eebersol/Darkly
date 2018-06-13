@@ -1,0 +1,2 @@
+J'ai essayé d'accéder a /etc/passwd pour pouvoir utilisé John Riper et ainsi peut etre trouver un mot de passe,
+en essayant plusieurs Url different j'ai remarqué que le message d'alert changeais, j'ai donc perseveré
