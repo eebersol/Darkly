@@ -3,12 +3,15 @@
 Addon firefox : (et chrome)
  
 Cookies Manager+
-Firebug					
+Firebug
+
 Temper data
+
 InformEnter
 Live HTTP headers
 User Agent Switcher
 View Source Charte $(version)
+
 No script
 
 Site :
@@ -20,6 +23,8 @@ model OWASP
 IN PROGRESS : 
 
 http://172.16.20.131/admin/
+
+Robot .txt
 
 FAIL FOUND ::
 
@@ -37,8 +42,14 @@ FAIL FOUND ::
 
 [7] http://172.16.20.131/admin/ ? 
 
+[8] Robot .txt ? 
 
+[9] Injection Sql image ?
 
+[10] Fail Upload ? 
 
+[11] Hide Url.
+
+[12] Brut force Shadow.
 
 
