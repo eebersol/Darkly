@@ -39,7 +39,7 @@ FAIL FOUND ::
 
 [9] Fail Upload ? 
 
-[10] Hide Url.
+[10] Hide Url. => http://192.168.9.128/.hidden/ ya forcement quelque chose dans ce truc
 
 [11] Brut force Shadow.
 
