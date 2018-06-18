@@ -19,13 +19,6 @@ Site :
 
 model OWASP
 
-
-IN PROGRESS : 
-
-http://172.16.20.131/admin/
-
-Robot .txt
-
 FAIL FOUND ::
 
 [1] redirection sur facebook  									=> FLAG : [B9E775A0291FED784A2D9680FCFAD7EDD6B8CDF87648DA647AAF4BBA288BCAB3]
@@ -50,4 +43,5 @@ FAIL FOUND ::
 
 [11] Brut force Shadow.
 
+[12] Survey 													=> FLAG : [03A944B434D5BAFF05F46C4BEDE5792551A2595574BCAFC9A6E25F67C382CCAA]
 
