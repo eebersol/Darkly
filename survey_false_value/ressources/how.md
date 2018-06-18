@@ -1,1 +1,1 @@
-La page survey permet de noter des users, si on modifie la value d'un input le serveur ne recheck pas cette dernière on peut dont donner +xxxxxxxx point a quelqu'un alors de cela est normalement limité a 10.
+La page survey permet de noter des users, si on modifie la value d'un input le serveur ne recheck pas cette dernière on peut dont donner +xxxxxxxx point a quelqu'un alors de cela est normalement limité à 10.

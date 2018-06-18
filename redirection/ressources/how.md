@@ -1,4 +1,4 @@
-En inspectant la page on voit que les liens de redirections en bas on une valeur particulière 
+En inspectant la page on voit que les liens de redirections en bas ont une valeur particulière 
 
 ex : <a href="index.php?page=redirect&amp;site=facebook" class="icon fa-facebook"></a>
 
