@@ -47,4 +47,4 @@ FAIL FOUND ::
 
 
 
-[13] Quand on click sur le logo Born to Sec, une page s'ouvre avec come url : http://192.168.9.128/?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c l'id ressemble beaucoup a un flag mais je suis pas sur 
+[13] Quand on click sur le logo Born to Sec, une page s'ouvre avec comme url : http://192.168.9.128/?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c l'id ressemble beaucoup a un flag mais je suis pas sur 
