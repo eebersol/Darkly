@@ -37,7 +37,7 @@ FAIL FOUND ::
 
 [8] Injection Sql image ?
 
-[9] Fail Upload ? 
+[9] Fail Upload ? 												=> accepte les jpeg et les .php.jpeg , il faut maintenant voir comment on peut s'en servir  
 
 [10] Hide Url. => http://192.168.9.128/.hidden/ ya forcement quelque chose dans ce truc
 
