@@ -35,17 +35,7 @@ FAIL FOUND ::
 
 [7] Robots.txt 													=> FLAG : [d19b4823e0d5600ceed56d5e896ef328d7a2b9e7ac7e80f4fcdb9b10bcb3e7ff] -> http://172.16.20.131/admin/ root;dragon
 
-[8] Injection Sql image ? {
-	
-
-	Search : 5 
-
-
-	ID: 5 
-	Title: Hack me ?
-	Url : borntosec.ddns.net/images.png
-
-}
+[8] Injection Sql image 										=> FLAG : [	f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188]
 
 [9] Fail Upload ? 												=> accepte les jpeg et les .php.jpeg , il faut maintenant voir comment on peut s'en servir  
 
