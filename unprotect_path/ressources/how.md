@@ -1,6 +1,8 @@
-Name : Le Directory Traversal
+Security breach name 	: Directory traversal attack
 
-J'ai essayé d'accéder à ?page=/etc/passwd pour pouvoir utilisé John the Ripper et ainsi peut être trouver un mot de passe,
-en essayant plusieurs Url different j'ai remarqué que le message d'alert changeait, j'ai donc persévéré...
-L'adresse pour pop le flag :
-[IP]/?page=../../../../../../../etc/passwd
+Principle 				: Permet vià des liens symboliques d'accéder à des contenue sensibles
+
+Solve 					: Masquer le contenue de l'url.
+
+In case 				: L'utilisation des liens symboliques dans l'url faisait apparaître des messages d'alertes différents, nous avons donc persévérés ...
+							[IP]/?page=../../../../../../../etc/passwd
