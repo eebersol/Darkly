@@ -1,8 +1,8 @@
-Security breach name 	: XSS (Cross-site scripting) persistant
+Security breach name 	: Cookie
 
-Principle 				: Insérer du code html/js/php dans un input pour essayer d'accéder à des données sensibles ou modifier la perception du site aux autres utilisateurs.
+Principle 				: Modifier la valeur d'un cookie pour tromper le serveur
 
-Solve 					: Stringifier les valeurs envoyé par le user.
+Solve 					: 
 
 In case 				: Sur la page feedback, un seul des deux inputs stringify la valeur entré par le user, le second ne fait que limiter la taille de son input,
 							il nous a donc suffit de changer ca taille maximum pour ensuite y insérer du code nous permettant d'envoyer le cookie de session de chaques users se rendant sur la page de feedback.
@@ -13,3 +13,6 @@ In case 				: Sur la page feedback, un seul des deux inputs stringify la valeur 
 
 
 							Il nous restait plus qu'à changer le cookie I_am_admin pour se faire passer pour celui-ci.
+
+
+							Ou tout simplement par la console developpeur.

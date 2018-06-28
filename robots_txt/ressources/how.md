@@ -12,3 +12,4 @@ In case 				: En accédant au robots.txt on voit ceci :
 						}
 						On essaye donc d'accéder à ses Urls sur la route /whatever on retrouve un file httppasswd avec le login/mot de passe root:8621ffdbc5698829397d97767ac13db3,
 						il ne nous restaient plus qu'à trouver le hashage du mot de passe et de le reverse. (md5). Le mot de passe ainsi trouvé est dragon.
+						il nous suffit d'aller sur /admin pour se log et obtenir le flag
